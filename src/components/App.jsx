@@ -23,7 +23,7 @@ export const App = () => {
         return;
       }
     }
-    setContacts([...contacts, { id: nanoid(), name, number }]);
+    setContacts(prev => [...prev, { id: nanoid(), name, number }]);
   };
 
   const deleteContact = id => {
